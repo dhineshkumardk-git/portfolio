@@ -5,6 +5,9 @@ import "./App.css";
 import myPhoto from "./assets/dk.png";
 import githubIcon from "./assets/github.png";
 import linkedinIcon from "./assets/linkedin.png";
+import portfolioImage from "./assets/portfolio-image.png";
+import hospitalImage from "./assets/hosp-image.png";
+import deptStoreImage from "./assets/dept-store.png";
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -227,52 +230,93 @@ function App() {
 
       </section>
 
-      {/* PROJECTS */}
-      <section id="projects" className="project-section">
+    {/* PROJECTS */}
+    <section id="projects" className="project-section">
+      
+      <h2>Projects</h2>
+      <div className="project-grid">
 
-        <h2>Projects</h2>
+    {/* hospital */}
+    <motion.a
+      href="https://dk-hospitals.netlify.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="project-card portfolio-link"
+      whileHover={{ scale: 1.05 }}
+      style={{
+        textDecoration: "none",
+        color: "inherit"
+      }}
+    >
+      <img
+        src={hospitalImage}
+        alt="Hospital Appointment"
+        className="project-image"
+      />
+      <h3>Hospital Appointment</h3>
 
-        <div className="project-grid">
+      <p>
+        Responsive healthcare website with
+        appointment booking and form validation
+        built using HTML, CSS, JavaScript and Vite.
+      </p>
+    </motion.a>
 
-          <motion.div
-            className="project-card"
-            whileHover={{ scale: 1.05 }}
-          >
-            <h3>E-Commerce Website</h3>
+    {/* Portfolio */}
+    <motion.a
+      href="https://dk-portfolio-site.netlify.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="project-card portfolio-link"
+      whileHover={{ scale: 1.05 }}
+      style={{
+        textDecoration: "none",
+        color: "inherit"
+      }}
+    >
+      <img
+        src={portfolioImage}
+        alt="Portfolio Website"
+        className="project-image"
+      />
 
-            <p>
-              Shopping website with authentication,
-              product filtering and cart management.
-            </p>
-          </motion.div>
+      <h3>Portfolio Website</h3>
 
-          <motion.div
-            className="project-card"
-            whileHover={{ scale: 1.05 }}
-          >
-            <h3>Portfolio Website</h3>
+      <p>
+        Interactive portfolio website with
+        responsive design and animations.
+      </p>
+    </motion.a>
 
-            <p>
-              Interactive portfolio website with
-              responsive design and animations.
-            </p>
-          </motion.div>
+    {/* Department Store*/}
+    <motion.a
+      href="https://dk-department-store.netlify.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="project-card portfolio-link"
+      whileHover={{ scale: 1.05 }}
+      style={{
+        textDecoration: "none",
+        color: "inherit"
+      }}
+    >
 
-          <motion.div
-            className="project-card"
-            whileHover={{ scale: 1.05 }}
-          >
-            <h3>Department Store App</h3>
+      <img
+        src={deptStoreImage}
+        alt="Department Store"
+        className="project-image"
+      />
+      <h3>Department Store App</h3>
 
-            <p>
-              Full stack application built using
-              React, Node.js and MongoDB.
-            </p>
-          </motion.div>
+      <p>
+        Developed a modern online grocery shopping platform with responsive design,
+        product browsing, and a seamless user shopping experience. 
+      </p>
+    </motion.a>
 
-        </div>
+  </div>
 
-      </section>
+</section>
 
       {/* CONTACT */}
       <section id="contact" className="contact-section">
